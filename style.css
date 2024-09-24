@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --dark-gray: #333;
+    --light-gray: #f9f9f9;
+
+    --font-montserrat: "Montserrat";
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+
+    font-family: var(--font-montserrat), sans-serif;
+}
+
+img {
+    display: block;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    background-image: url("./bg-fhd.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 576px) {
+    main {
+        background-position: right -400px center;
+    }
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.40);
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    position: relative;
+    z-index: 2;
+}
+@media screen and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+.mainpage-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+    .inner-wrapper {
+        width: 100%;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.avatar {
+    max-width: 250px;
+    width: 100%;
+
+    user-select: none;
+}
+@media screen and (max-width: 992px) {
+    .avatar {
+        max-width: 300px;
+    }
+}
+
+.skills {
+    width: 100%;
+    max-width: 500px;
+
+    margin-top: 30px;
+}
+
+.skills__title {
+    font-size: 6rem;
+    color: #fff;
+    font-weight: 600;
+
+    margin-bottom: 2.4rem;
+}
+
+.skills__list {
+    list-style-type: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 2rem 3.2rem;
+}
+
+.skills__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 1.5rem;
+}
+
+.skill__icon {
+    width: 100%;
+    max-width: 50px;
+}
+
+.skill__name {
+    color: #fff;
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.contacts {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contacts__list {
+    list-style-type: none;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contact__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact__icon {
+    max-width: 50px;
+    width: 100%;
+}
+
+.contact__link {
+    color: #fff;
+    font-size: 3rem;
+
+    text-decoration: none;
+}
+@media screen and (max-width: 450px) {
+    .contact__link {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    .contact__link {
+        font-size: 2.2rem;
+    }
+}
