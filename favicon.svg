@@ -14,7 +14,7 @@
                 fill: #003CFF;
             }
             #code {
-                fill: #fff;
+                fill: #e9f648;
             }
         }
     </style>
